@@ -1,0 +1,1020 @@
+@import "exec"
+@import "resets"
+
+$yellow = #f5cf2a
+
+/* SUF custom font */
+@font-face
+  font-family:'SUF'
+  src:url(fonts/suf_webtest5-webfont.eot)
+  src:url(fonts/suf_webtest5-webfont.eot?#iefix) format("embedded-opentype"),url(fonts/suf_webtest5-webfont.ttf) format("truetype"),url(fonts/suf_webtest5-webfont.woff) format("woff"),url(fonts/suf_webtest5-webfont.svg#sufwebtest5) format("svg")
+  font-weight:400
+  font-style:normal
+
+/* Grid of 12 104px columns with 16px gutter */
+.grid-container
+  margin:0 auto
+  width: 1440px
+
+.row
+  clear:both
+
+.col
+  float:left
+  margin-left: 8px
+  margin-right: 8px
+
+
+.col1
+  width:104px
+
+
+.col2
+  width:224px
+
+
+.col3
+  width:344px
+
+
+.col4
+  width:464px
+
+
+.col5
+  width:584px
+
+
+.col6
+  width:704px
+
+
+.col7
+  width:824px
+
+
+.col8
+  width:944px
+
+
+.col9
+  width:1064px
+
+
+.col10
+  width:1184px
+
+
+.col11
+  width:1304px
+
+
+.col12
+  width:1424px
+
+
+html
+  font-family:'SUF'
+  font-size:30px
+  line-height:1.25
+  color:#191919
+
+
+/* TYPOGRAPHY */
+.t1
+  font-size:70px
+  font-family:'SUF'
+  font-weight:400
+  text-transform:none
+
+
+.executive
+  font-family:'Executive-Regular',helvetica,arial,sans-serif
+
+
+.gray
+  color:silver!important
+
+
+.black
+  color:#000!important
+
+
+.size-copy
+  font-size:16px
+  line-height:1.4
+
+
+.size-mid
+  font-size:22px
+  line-height:1.4
+
+
+b,strong
+  font-weight:400
+
+
+p
+  margin-bottom:1.25em
+  margin-top:.25em
+
+
+i,em
+  font-family:'Executive-RegularIta',helvetica,arial,sans-serif
+  font-style:normal
+  font-weight:400
+
+
+.light
+  font-family:'Executive-Light'
+
+
+.light-italic
+  font-family:'Executive-LightIta'
+
+
+.uppercase
+  text-transform:uppercase
+
+
+/* LINKS */
+a,a:active,a:visited
+  text-decoration:none
+  color:inherit
+  transition:all .2s
+
+a:hover, a.active
+//   opacity:.5
+  color: silver
+
+a.noopacity:hover
+  opacity:1
+
+
+li.page_item
+  padding-right:15px
+
+
+/* STRUTURE */
+.container
+  margin:0 auto
+  width: 97%
+
+
+.full-container
+  margin:0 auto
+  width: 97%
+
+
+.half
+  float:left
+  width:50%
+  box-sizing:border-box
+  padding:10px
+
+
+.quarter
+  float:left
+  width:25%
+  box-sizing:border-box
+  padding:10px
+
+
+.three-quarter
+  float:left
+  width:75%
+  box-sizing:border-box
+  padding:10px
+
+
+.full
+  width:100%
+  box-sizing:border-box
+  padding:5px
+
+
+.auto-margin
+  margin:auto
+
+
+.newsleftmargin
+  margin-left:1.5%!important
+
+
+#main-content
+  font-size:80px
+  line-height:1
+
+
+#main-menu
+  margin: 0
+  li
+    padding-left:15px
+    &:first-child
+      padding-left:0px
+
+
+.border-top
+  border-top:2px #000 solid
+
+
+.border-bottom
+  border-bottom:2px #000 solid
+
+
+.no-p-margin p
+  margin:0!important
+
+
+img
+  max-width:100%
+  height:auto
+
+
+/* HEADER */
+header
+  font-size:64px
+
+
+/* Films */
+#films-carousel
+  margin-bottom:60px
+  height:568px
+
+#carousel
+  width:100%
+  position:relative
+  overflow:hidden
+  opacity:0
+  transition:opacity .2s
+
+
+#carousel .item
+  background-color: lightgray
+  background-size:cover
+  background-position: center top
+  text-shadow:1px 1px 1px lightgray
+
+
+#carousel .item .held
+  opacity:0
+  transition:opacity .6s
+
+
+.carousel-title
+  max-width:70%
+  margin:auto
+  color:#fff
+  padding-top:20px
+  text-align:center
+  font-size:160px
+  line-height:1.1
+
+
+.carousel-subtitle
+  font-size:80px
+
+
+.carousel-nav
+  position:absolute
+  top:46%
+  z-index:999
+  color:#fff
+
+
+#carousel-prev
+  left:50px
+
+
+#carousel-next
+  right:50px
+
+
+nav#films-filter
+  font-size:24px
+  clear: both
+  & li
+    margin: 16px 8px
+    display: inline-block
+    float: left
+    padding: 7px
+    border: solid black 2px
+    &.current
+      background-color: $yellow
+    &:hover
+      background-color: $yellow
+
+
+#films article
+  box-sizing:border-box
+  height:261px
+  float:left
+  border:2px #000 solid
+  padding:20px
+  margin-bottom:16px
+  text-align:center
+  background-size:cover
+
+
+#films article[data-bg]
+  color:#fff
+  text-shadow:1px 1px 1px lightgray
+
+// Single film
+
+.responsive-wrapper
+  margin-bottom:45px
+  margin-bottom: 0
+  background-color:#000
+  position:relative
+  height:0
+  padding-bottom:56.25%
+  iframe
+    position:absolute
+    width:100%
+    height:100%
+    left:0
+    top:0
+
+* html .responsive-wrapper
+  margin-bottom:45px
+  margin-bottom: 0
+  background-color:#000
+  position:relative
+  height:0
+  padding-bottom:56.25%
+  iframe
+    position:absolute
+    width:100%
+    height:100%
+    left:0
+    top:0
+
+#film-single
+  .film-year
+    font-size: .9em
+  .content
+    p:first-child
+      margin-top:0
+  li
+    list-style-position: outside
+    margin-bottom: .3em
+
+
+/* HOMEPAGE */
+ul#words
+  font-size:150px
+  li
+    display:inline-block
+
+li.animate
+  margin-right:15px
+  &:last-child
+    margin-right:0
+
+li.animate, #animation-suf
+  opacity:0
+  transition:all .8s
+
+
+/* VISION PAGE */
+#long-about-trigger
+  font-size:.7em
+  vertical-align:top
+
+
+#people li
+  list-style:none
+  display:inline-block
+  text-align:center
+  font-size:60px
+  margin:10px
+
+
+#people li.person img
+  width:250px
+  height:250px
+  display:block
+  margin-bottom:10px
+  border-radius:250px
+
+
+section#long-about
+  padding-left: 100px
+  padding-top: 25px
+  padding-right: 25px
+
+
+#background-image
+  position:fixed
+  top:0
+  left:0
+  right:0
+  bottom:0
+  background-size:cover
+  z-index:-999
+
+
+/* TEAM SINGLE */
+#single-team img.attachment-team-single
+  max-width:800px
+  max-height:400px
+  width:auto
+  height:auto
+
+
+ul#people
+  max-width:1540px
+
+
+/* ABOUT PAGE */
+
+#about
+  font-size: 70px;
+  li
+    list-style: none
+  span
+    font-size:45px
+    color:silver
+    vertical-align:top
+  .genericon-45
+    font-size:30px!important
+    width:auto!important
+    margin: 7px 0 0 7px
+
+#map-canvas
+  margin-top:20px
+  height:350px
+  font-size:11px!important
+  *
+    font-size:11px!important
+  img
+    max-width:inherit
+
+/* PAGES */
+article.post-password-required input[type=password]
+  width:500px
+  padding:10px
+
+
+article.post-password-required input[type=submit]
+  font-family:'SUF'
+  padding:10px
+
+article.investors a
+  color: black
+
+/* POSTS LOOP */
+section#posts
+  width:1200px
+
+section#posts,nav#news-nav
+  float:left
+
+section#posts article.post
+  float:left
+  border:2px #000 solid
+  padding: 20px
+  margin-bottom:16px
+  box-sizing:border-box
+
+article.post .post-title
+  text-align:center
+
+article.post .post-thumb
+  text-align:center
+  margin-top:10px
+  padding-top:10px
+  border-top:2px #000 solid
+
+article.post .post-thumb-img
+  width:400px
+  max-width:100%
+  height:auto
+  margin-top:10px
+  margin-bottom:10px
+
+article.post .post-meta,article.post .post-copy
+  font-size:18px
+  line-height:1.4
+
+article.post .post-meta-section
+  margin-top:10px
+  padding-top:10px
+  border-top:2px #000 solid
+
+
+article.post .post-meta-section span
+  font-size:13px
+  display:inline-block
+  vertical-align:baseline
+  padding-right:10px
+
+
+article.post .post-copy
+  margin-top:10px
+  padding-top:10px
+  border-top:2px #000 solid
+
+
+article.post .post-copy p:last-child
+  margin:0
+
+
+article.post .post-copy-full
+  display:none
+
+
+nav#pagination
+  text-align: center
+  border:2px #000 solid
+  padding:20px
+  margin-bottom:16px
+  box-sizing: border-box
+
+nav#news-nav, nav#news-nav-mobile
+  font-size:18px
+  line-height:1.4
+  .news-switch-button
+    display: block
+    padding: 14px
+    border: solid black 2px
+    text-align: center
+    &:hover
+      color: black
+      background-color: $yellow
+      opacity: 1
+
+nav#news-nav-mobile
+  display: none
+  font-size: 14px
+  width: 90%
+  margin: auto
+  margin-bottom: 16px
+  .news-switch-button
+    width: 34%
+
+/* FOOTER */
+footer
+  color: silver
+  .meta-drawer-trigger
+    transition: all .2s
+  a:hover, .meta-drawer-trigger:hover
+    color: gray !important
+  li
+    margin-right:3px
+    margin-left:3px
+
+#footer-left li:first-child
+  margin-left:0
+
+#footer-right li:last-child
+  margin-right:0
+
+#discologo
+  padding-bottom: 3px !important
+
+.footer-meta-drawer
+  display:none
+
+
+/* MEDIA QUERIES */
+/* FOR Team */
+@media only screen and (min-width : 1440px)
+  #people li.person img
+    width:320px
+    height:320px
+    border-radius:320px
+
+/* GENERAL */
+@media screen and (min-width: 2140px)
+
+  .grid-container
+    width: 2092px
+
+  section#posts
+    width:1800px
+
+@media screen and (max-width: 1480px)
+
+  section#posts
+    width:1000px
+
+  // Grid of 12 86px columns with 14px gutter
+  $cols = 12
+  $col = 86px
+  $gutter = 14px
+  .grid-container
+    margin:0 auto
+    width: ($col * $cols)+($gutter * $cols)
+  .row
+    clear: both
+  .col
+    float: left
+    margin-left: ($gutter/2)
+    margin-right: ($gutter/2)
+  .col1
+    width: (1*$col)+(0*$gutter)
+  .col2
+    width: (2*$col)+(1*$gutter)
+  .col3
+    width: (3*$col)+(2*$gutter)
+  .col4
+    width: (4*$col)+(3*$gutter)
+  .col5
+    width: (5*$col)+(4*$gutter)
+  .col6
+    width: (6*$col)+(5*$gutter)
+  .col7
+    width: (7*$col)+(6*$gutter)
+  .col8
+    width: (8*$col)+(7*$gutter)
+  .col9
+    width: (9*$col)+(8*$gutter)
+  .col10
+    width: (10*$col)+(9*$gutter)
+  .col11
+    width: (11*$col)+(10*$gutter)
+  .col12
+    width: (12*$col)+(11*$gutter)
+
+  nav#films-filter li
+    margin: 14px 7px
+
+@media screen and (max-width: 1240px)
+
+  #films-carousel
+    height:473px
+
+
+  nav#films-filter li
+    margin: 12px 6px
+
+  #films article
+    height:184px
+    font-size:.7em
+
+  ul#words
+    font-size:110px
+
+  section#posts
+    width:850px
+
+
+  article.post .post-title
+    font-size: .8em
+
+
+  article.post .post-meta, article.post .post-copy
+    font-size: 16px
+
+
+  /* Grid of 12 73px columns with 12px gutter */
+  .grid-container
+    margin:0 auto
+    width: 1020px
+
+  .row
+    clear:both
+
+  .col
+    float:left
+    margin-left: 6px
+    margin-right: 6px
+
+
+  .col1
+    width:73px
+
+
+  .col2
+    width:158px
+
+
+  .col3
+    width:243px
+
+
+  .col4
+    width:328px
+
+
+  .col5
+    width:413px
+
+
+  .col6
+    width:498px
+
+
+  .col7
+    width:583px
+
+
+  .col8
+    width:668px
+
+
+  .col9
+    width:753px
+
+
+  .col10
+    width:838px
+
+
+  .col11
+    width:923px
+
+
+  .col12
+    width:1008px
+
+
+@media screen and (max-width: 1035px)
+
+  #single-team img.attachment-team-single
+    max-width: 100%
+
+  ul#words
+    font-size: 90px
+
+  section#posts
+    width:630px
+
+
+  article.post .post-title
+    font-size:.8em
+
+  nav#news-nav
+    font-size:16px
+
+  header
+    font-size: 50px
+
+  #films-carousel
+    height:400px
+
+  .carousel-title
+    font-size: 100px
+
+
+  .carousel-subtitle
+    font-size: 60px
+
+  nav#films-filter li
+    margin: 8px 4px
+
+  #films article
+    font-size:.6em
+
+  footer.size-copy
+    font-size:14px
+
+  footer .half
+    float: none
+    width: auto
+    display: inline-block
+    padding: 3px 10px
+
+  footer .half.align-right
+    text-align: left
+
+  /* Grid of 12 55px columns with 8px gutter */
+  .grid-container
+    margin:0 auto
+    width: 756px
+
+  .col
+    margin-left: 4px
+    margin-right: 4px
+
+  .col1
+    width:55px
+
+  .col2
+    width:118px
+
+  .col3
+    width:181px
+
+  .col4
+    width:244px
+
+  .col5
+    width:307px
+
+  .col6
+    width:370px
+
+  .col7
+    width:433px
+
+  .col8
+    width:496px
+
+  .col9
+    width:559px
+
+  .col10
+    width:622px
+
+  .col11
+    width:685px
+
+  .col12
+    width:748px
+
+@media screen and (max-width: 770px)
+
+  #main-content
+    font-size: 70px
+
+  .grid-container
+    width: 100%
+
+  ul#words
+    font-size: 60px
+
+  li.animate
+    margin-right: 8px
+
+  section#long-about
+    padding-left: 0px
+
+  ul#people
+    margin: auto
+    width: 270px
+
+  #films-carousel
+    margin-bottom: 20px
+    height: 350px
+
+  #carousel-next
+    right: 25px
+
+  #carousel-prev
+    left: 25px
+
+  .carousel-title
+    font-size: 80px
+
+  .carousel-subtitle
+    font-size: 60px
+
+  nav#films-filter
+    width: 90%
+    margin: 0 auto 10px auto
+    font-size: 16px
+    text-align: center
+    li
+      float: none
+      margin: 12px 6px
+      &:first-child
+        margin-left: 0px
+
+  #films article
+    float: none
+    width: 90%
+    height:160px
+    margin: 0 auto 14px auto
+    font-size:.8em
+
+  body.single-film .col1, body.single-team .col1, body.single-team .col2
+    width: 0px
+
+  #video-player-holder
+    width: 94%
+    float: none
+    margin-left: auto
+    margin-right: auto
+
+  body.single-film .content .col8, body.single-team .content .col8
+    width: 94%
+    float: none
+    margin-left: auto
+    margin-right: auto
+
+  body.single-film .content .col6, body.single-team .content .col6
+    width: 85%
+    float: none
+    margin-left: auto
+    margin-right: auto
+
+  section#posts
+    width: 90%
+    margin: auto
+    float: none
+
+  .newsleftmargin
+    margin-left: auto !important
+
+  section#posts article.post
+    float: none
+    width: 100%
+    margin-left: 0
+    margin-right: 0
+
+  article.post .post-title
+    font-size: .7em
+
+  nav#news-nav-mobile
+    display: block
+
+  nav#news-nav
+    display: none
+    font-size: 14px
+    float: none
+    width: 90%
+    margin: 0 auto 10px auto
+    text-align: center
+
+  nav#news-nav ul
+    margin-top: 8px
+
+  nav#news-nav li
+    display: inline-block
+    padding: 0px 3px
+
+  #about
+    font-size: 55px;
+
+  footer.full
+    padding: 0px
+
+@media screen and (max-width: 520px)
+  header .quarter, header .three-quarter
+    float: none
+    width: auto
+    display: inline-block
+    padding: 5px
+
+  header .align-right
+    text-align: left
+
+  #carousel-next
+    right: 15px
+
+  #carousel-prev
+    left: 15px
+
+@media screen and (max-width: 420px)
+
+  header
+    font-size: 38px
+
+  #main-menu li
+    padding-left: 7px
+
+  header .quarter, header .three-quarter
+    float: none
+    width: auto
+    display: inline-block
+    padding: 5px
+
+  header .align-right
+    text-align: left
+
+  #main-content
+    font-size: 50px
+
+  ul#words
+    font-size: 50px
+
+  #films-carousel
+    height: 280px
+
+  .carousel-title
+    font-size: 60px
+
+  .carousel-subtitle
+    font-size: 50px
+
+  #carousel-next
+    right: 5px
+
+  #carousel-prev
+    left: 5px
+
+  nav#films-filter
+    font-size: 16px
+
+  #films article
+    font-size: 50px
+
+  #about
+    font-size: 45px;
+
+  footer .half
+    padding: 3px 5px
+
+  footer.size-copy
+    font-size: 11px
+
+  .genericon
+    width: 11px
+    height: 11px
+    font-size: 11px
+
+  #discologo
+    height: 15px
