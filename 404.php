@@ -3,8 +3,9 @@
   	<!-- main content -->
 
 	<section id="main-content">
-
-		<h3>Not found</h3>
+    <div class="container">
+  		<h3 class="t1">Not found</h3>
+    </div>
 
 	<!-- end main-content -->
 
