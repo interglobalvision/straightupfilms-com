@@ -1,4 +1,4 @@
-@import "exec"
+@import "executive.css"
 @import "resets"
 
 $yellow = #f5cf2a
@@ -24,61 +24,47 @@ $yellow = #f5cf2a
   margin-left: 8px
   margin-right: 8px
 
-
 .col1
   width:104px
-
 
 .col2
   width:224px
 
-
 .col3
   width:344px
-
 
 .col4
   width:464px
 
-
 .col5
   width:584px
-
 
 .col6
   width:704px
 
-
 .col7
   width:824px
-
 
 .col8
   width:944px
 
-
 .col9
   width:1064px
-
 
 .col10
   width:1184px
 
-
 .col11
   width:1304px
 
-
 .col12
   width:1424px
-
 
 html
   font-family:'SUF'
   font-size:30px
   line-height:1.25
   color:#191919
-
 
 /* TYPOGRAPHY */
 .t1
@@ -87,55 +73,43 @@ html
   font-weight:400
   text-transform:none
 
-
 .executive
-  font-family:'Executive-Regular',helvetica,arial,sans-serif
-
+  font-family:'Executive-Regular', helvetica,arial,sans-serif
 
 .gray
   color:silver!important
 
-
 .black
   color:#000!important
-
 
 .size-copy
   font-size:16px
   line-height:1.4
 
-
 .size-mid
   font-size:22px
   line-height:1.4
 
-
 b,strong
   font-weight:400
-
 
 p
   margin-bottom:1.25em
   margin-top:.25em
 
-
 i,em
-  font-family:'Executive-RegularIta',helvetica,arial,sans-serif
+  font-family:'Executive-RegularIta', helvetica,arial,sans-serif
   font-style:normal
   font-weight:400
-
 
 .light
   font-family:'Executive-Light'
 
-
 .light-italic
   font-family:'Executive-LightIta'
 
-
 .uppercase
   text-transform:uppercase
-
 
 /* LINKS */
 a,a:active,a:visited
@@ -150,21 +124,17 @@ a:hover, a.active
 a.noopacity:hover
   opacity:1
 
-
 li.page_item
   padding-right:15px
-
 
 /* STRUTURE */
 .container
   margin:0 auto
   width: 97%
 
-
 .full-container
   margin:0 auto
   width: 97%
-
 
 .half
   float:left
@@ -172,13 +142,11 @@ li.page_item
   box-sizing:border-box
   padding:10px
 
-
 .quarter
   float:left
   width:25%
   box-sizing:border-box
   padding:10px
-
 
 .three-quarter
   float:left
@@ -186,25 +154,20 @@ li.page_item
   box-sizing:border-box
   padding:10px
 
-
 .full
   width:100%
   box-sizing:border-box
   padding:5px
 
-
 .auto-margin
   margin:auto
-
 
 .newsleftmargin
   margin-left:1.5%!important
 
-
 #main-content
   font-size:80px
   line-height:1
-
 
 #main-menu
   margin: 0
@@ -213,28 +176,22 @@ li.page_item
     &:first-child
       padding-left:0px
 
-
 .border-top
   border-top:2px #000 solid
-
 
 .border-bottom
   border-bottom:2px #000 solid
 
-
 .no-p-margin p
   margin:0!important
-
 
 img
   max-width:100%
   height:auto
 
-
 /* HEADER */
 header
   font-size:64px
-
 
 /* Films */
 #films-carousel
@@ -247,19 +204,14 @@ header
   overflow:hidden
   opacity:0
   transition:opacity .2s
-
-
-#carousel .item
-  background-color: lightgray
-  background-size:cover
-  background-position: center top
-  text-shadow:1px 1px 1px lightgray
-
-
-#carousel .item .held
-  opacity:0
-  transition:opacity .6s
-
+  .item
+    background-color: lightgray
+    background-size:cover
+    background-position: center top
+    text-shadow:1px 1px 1px lightgray
+    .held
+      opacity:0
+      transition:opacity .6s
 
 .carousel-title
   max-width:70%
@@ -270,10 +222,8 @@ header
   font-size:160px
   line-height:1.1
 
-
 .carousel-subtitle
   font-size:80px
-
 
 .carousel-nav
   position:absolute
@@ -281,14 +231,11 @@ header
   z-index:999
   color:#fff
 
-
 #carousel-prev
   left:50px
 
-
 #carousel-next
   right:50px
-
 
 nav#films-filter
   font-size:24px
@@ -304,7 +251,6 @@ nav#films-filter
     &:hover
       background-color: $yellow
 
-
 #films article
   box-sizing:border-box
   height:261px
@@ -314,7 +260,6 @@ nav#films-filter
   margin-bottom:16px
   text-align:center
   background-size:cover
-
 
 #films article[data-bg]
   color:#fff
@@ -360,7 +305,6 @@ nav#films-filter
     list-style-position: outside
     margin-bottom: .3em
 
-
 /* HOMEPAGE */
 ul#words
   font-size:150px
@@ -382,28 +326,24 @@ li.animate, #animation-suf
   font-size:.7em
   vertical-align:top
 
+#people
+  li
+    list-style:none
+    display:inline-block
+    text-align:center
+    font-size:60px
+    margin:10px
+    &.person img
+      width:250px
+      height:250px
+      display:block
+      margin-bottom:10px
+      border-radius:250px
 
-#people li
-  list-style:none
-  display:inline-block
-  text-align:center
-  font-size:60px
-  margin:10px
-
-
-#people li.person img
-  width:250px
-  height:250px
-  display:block
-  margin-bottom:10px
-  border-radius:250px
-
-
-section#long-about
+#long-about
   padding-left: 100px
   padding-top: 25px
   padding-right: 25px
-
 
 #background-image
   position:fixed
@@ -414,7 +354,6 @@ section#long-about
   background-size:cover
   z-index:-999
 
-
 /* TEAM SINGLE */
 #single-team img.attachment-team-single
   max-width:800px
@@ -422,10 +361,8 @@ section#long-about
   width:auto
   height:auto
 
-
 ul#people
   max-width:1540px
-
 
 /* ABOUT PAGE */
 
@@ -456,7 +393,6 @@ article.post-password-required input[type=password]
   width:500px
   padding:10px
 
-
 article.post-password-required input[type=submit]
   font-family:'SUF'
   padding:10px
@@ -478,52 +414,46 @@ section#posts article.post
   margin-bottom:16px
   box-sizing:border-box
 
-article.post .post-title
-  text-align:center
+article.post
+  .post-title
+    text-align:center
+  .post-thumb
+    text-align:center
+    margin-top:10px
+    padding-top:10px
+    border-top:2px #000 solid
+  .post-thumb-img
+    width:400px
+    max-width:100%
+    height:auto
+    margin-top:10px
+    margin-bottom:10px
 
-article.post .post-thumb
-  text-align:center
-  margin-top:10px
-  padding-top:10px
-  border-top:2px #000 solid
-
-article.post .post-thumb-img
-  width:400px
-  max-width:100%
-  height:auto
-  margin-top:10px
-  margin-bottom:10px
-
-article.post .post-meta,article.post .post-copy
+article.post .post-meta, article.post .post-copy
   font-size:18px
   line-height:1.4
 
-article.post .post-meta-section
-  margin-top:10px
-  padding-top:10px
-  border-top:2px #000 solid
-
-
-article.post .post-meta-section span
-  font-size:13px
-  display:inline-block
-  vertical-align:baseline
-  padding-right:10px
-
+article.post
+  .post-meta-section
+    margin-top:10px
+    padding-top:10px
+    border-top:2px #000 solid
+    span
+      font-size:13px
+      display:inline-block
+      vertical-align:baseline
+      padding-right:10px
 
 article.post .post-copy
   margin-top:10px
   padding-top:10px
   border-top:2px #000 solid
 
-
 article.post .post-copy p:last-child
   margin:0
 
-
 article.post .post-copy-full
   display:none
-
 
 nav#pagination
   text-align: center
