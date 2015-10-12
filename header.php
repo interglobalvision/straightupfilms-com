@@ -83,6 +83,7 @@
 		<li><a <?php if (is_page('vision')) {echo 'class="active"'; }?> href="<?php echo site_url('/vision'); ?>">Vision</a></li>
 		<li><a <?php if ('team' == get_post_type() || is_post_type_archive('team')) {echo 'class="active"'; }?>href="<?php echo site_url('/team'); ?>">Team</a></li>
 		<li><a <?php if ('film' == get_post_type() || is_post_type_archive('film')) {echo 'class="active"'; }?>href="<?php echo site_url('/film'); ?>">Films</a></li>
+		<li><a <?php if ('branded' == get_post_type() || is_post_type_archive('branded')) {echo 'class="active"'; }?>href="<?php echo site_url('/branded'); ?>">Branded</a></li>
 		<li><a <?php if (in_category('news') || is_category('news')) {echo 'class="active"'; }?>href="<?php echo site_url('/news'); ?>">News</a></li>
 		<li><a <?php if (is_page('contact')) {echo 'class="active"'; }?>href="<?php echo site_url('/contact'); ?>">Contact</a></li>
 	</ul>
