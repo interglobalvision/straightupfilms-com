@@ -82,6 +82,41 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 	);
 
 	$meta_boxes[] = array(
+		'id'         => 'branded_metabox',
+		'title'      => 'Branded Settings',
+		'pages'      => array( 'branded', ),
+		'context'    => 'normal',
+		'priority'   => 'high',
+		'show_names' => true,
+		'fields'     => array(
+			array(
+				'name' => 'Video',
+				'desc' => 'vimeo id',
+				'id'   => $prefix . 'trailer',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Carousel Image',
+				'desc' => '...',
+				'id'   => $prefix . 'carousel_image',
+				'type' => 'file',
+			),
+			array(
+				'name' => 'Title',
+				'desc' => '...',
+				'id'   => $prefix . 'title',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Director',
+				'desc' => '...',
+				'id'   => $prefix . 'director',
+				'type' => 'text',
+			),
+		),
+	);
+
+	$meta_boxes[] = array(
 		'id'         => 'people_metabox',
 		'title'      => 'People Settings',
 		'pages'      => array( 'team', ),

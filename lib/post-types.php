@@ -3,7 +3,7 @@ add_action( 'init', 'register_cpt_film' );
 
 function register_cpt_film() {
 
-    $labels = array( 
+    $labels = array(
         'name' => _x( 'Films', 'film' ),
         'singular_name' => _x( 'film', 'film' ),
         'add_new' => _x( 'Add New', 'film' ),
@@ -18,17 +18,17 @@ function register_cpt_film() {
         'menu_name' => _x( 'Films', 'film' ),
     );
 
-    $args = array( 
+    $args = array(
         'labels' => $labels,
         'hierarchical' => false,
-        
+
         'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
         'taxonomies' => array( 'category' ),
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
         'menu_position' => 5,
-        
+
         'show_in_nav_menus' => true,
         'publicly_queryable' => true,
         'exclude_from_search' => false,
@@ -42,11 +42,54 @@ function register_cpt_film() {
     register_post_type( 'film', $args );
 }
 
+add_action( 'init', 'register_cpt_branded' );
+
+function register_cpt_branded() {
+
+    $labels = array(
+        'name' => _x( 'Branded', 'branded' ),
+        'singular_name' => _x( 'Branded', 'branded' ),
+        'add_new' => _x( 'Add New', 'branded' ),
+        'add_new_item' => _x( 'Add New Branded', 'branded' ),
+        'edit_item' => _x( 'Edit Branded', 'branded' ),
+        'new_item' => _x( 'New Branded', 'branded' ),
+        'view_item' => _x( 'View Branded', 'branded' ),
+        'search_items' => _x( 'Search Branded', 'branded' ),
+        'not_found' => _x( 'No branded found', 'branded' ),
+        'not_found_in_trash' => _x( 'No branded found in Trash', 'branded' ),
+        'parent_item_colon' => _x( 'Parent Branded:', 'branded' ),
+        'menu_name' => _x( 'Branded', 'branded' ),
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'hierarchical' => false,
+
+        'supports' => array( 'title', 'editor', 'thumbnail' ),
+
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 5,
+
+        'show_in_nav_menus' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => false,
+        'has_archive' => true,
+        'query_var' => true,
+        'can_export' => true,
+        'rewrite' => true,
+        'capability_type' => 'post'
+    );
+
+    register_post_type( 'branded', $args );
+}
+
 add_action( 'init', 'register_cpt_team' );
 
 function register_cpt_team() {
 
-    $labels = array( 
+    $labels = array(
         'name' => _x( 'Team', 'team' ),
         'singular_name' => _x( 'Team', 'team' ),
         'add_new' => _x( 'Add New', 'team' ),
@@ -61,17 +104,17 @@ function register_cpt_team() {
         'menu_name' => _x( 'Team', 'team' ),
     );
 
-    $args = array( 
+    $args = array(
         'labels' => $labels,
         'hierarchical' => false,
-        
+
         'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
-        
+
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
         'menu_position' => 5,
-        
+
         'show_in_nav_menus' => true,
         'publicly_queryable' => true,
         'exclude_from_search' => false,
@@ -89,7 +132,7 @@ add_action( 'init', 'register_cpt_words' );
 
 function register_cpt_words() {
 
-    $labels = array( 
+    $labels = array(
         'name' => _x( 'Word', 'words' ),
         'singular_name' => _x( 'Words', 'words' ),
         'add_new' => _x( 'Add New', 'words' ),
@@ -104,17 +147,17 @@ function register_cpt_words() {
         'menu_name' => _x( 'Word', 'words' ),
     );
 
-    $args = array( 
+    $args = array(
         'labels' => $labels,
         'hierarchical' => false,
-        
+
         'supports' => array( 'title' ),
-        
+
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
         'menu_position' => 5,
-        
+
         'show_in_nav_menus' => true,
         'publicly_queryable' => true,
         'exclude_from_search' => true,
@@ -127,49 +170,4 @@ function register_cpt_words() {
 
     register_post_type( 'words', $args );
 }
-
-/*
-add_action( 'init', 'register_cpt_press' );
-
-function register_cpt_press() {
-$labels = array( 
-        'name' => _x( 'Press', 'press' ),
-        'singular_name' => _x( 'Press', 'press' ),
-        'add_new' => _x( 'Add New', 'press' ),
-        'add_new_item' => _x( 'Add New' , 'press' ),
-        'edit_item' => _x( 'Edit' , 'press' ),
-        'new_item' => _x( 'New' , 'press' ),
-        'view_item' => _x( 'View' , 'press' ),
-        'search_items' => _x( 'Search ' . 'Press', 'press' ),
-        'not_found' => _x( 'None found' , 'press' ),
-        'not_found_in_trash' => _x( 'None found in Trash', 'press' ),
-        'parent_item_colon' => _x( 'Parent:', 'press' ),
-        'menu_name' => _x( 'Press', 'press' ),
-    );
-
-    $args = array( 
-        'labels' => $labels,
-        'hierarchical' => false,
-        
-        'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
-        'taxonomies' => array( 'post_tag', 'category '),
-        
-        'public' => true,
-        'show_ui' => true,
-        'show_in_menu' => true,
-        'menu_position' => 5,
-        
-        'show_in_nav_menus' => true,
-        'publicly_queryable' => true,
-        'exclude_from_search' => false,
-        'has_archive' => true,
-        'query_var' => true,
-        'can_export' => true,
-        'rewrite' => true,
-        'capability_type' => 'post'
-    );
-
-    register_post_type( 'press' , $args );
-}
-*/
 ?>
