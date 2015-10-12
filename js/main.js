@@ -6,6 +6,7 @@ var words = jQuery('li.animate');
 var $posts = jQuery('#posts');
 var $carousel = jQuery('#carousel');
 var $films = jQuery('#films');
+var $brandedModal = jQuery('#branded-modal');
 
 var wh = jQuery(window).height();
 var $main = jQuery('#main-content');
@@ -179,6 +180,97 @@ jQuery(document).ready(function() {
         }, 800);
       },
     });
+  }
+
+  if ($brandedModal.length) {
+
+    var BrandedModal = {
+      self: $brandedModal,
+      player: null,
+      nowPlaying: 0,
+      $playlist: $('.branded'),
+      playlistLength: ($('.branded').length - 1),
+      vimeoContainer: $('#branded-modal-video-wrapper'),
+
+      loadVimeo: function($element) {
+        var _this = this;
+        var data = $element.data();
+
+        _this.self.show();
+        _this.nowPlaying = $element.index();
+        _this.vimeoContainer.html('<iframe id="branded-modal-vimeo" width="100%" height="100%" src="//player.vimeo.com/video/' + data.vimeo + '?api=1&autoplay=1&badge=0&byline=0&portrait=0&player_id=branded-modal-vimeo" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+
+        _this.player = $f($('#branded-modal-vimeo')[0]);
+        _this.player.addEvent('ready', function() {
+          _this.player.addEvent('finish', function() {
+            BrandedModal.next();
+          });
+        });
+
+      },
+
+      next: function() {
+        var _this = this;
+        var $active = _this.$playlist.eq(_this.nowPlaying);
+
+        if (_this.nowPlaying === _this.playlistLength) {
+          _this.loadVimeo(_this.$playlist.eq(0));
+        } else {
+          _this.loadVimeo(_this.$playlist.eq(_this.nowPlaying + 1));
+        }
+
+      },
+
+      prev: function() {
+        var _this = this;
+        var $active = _this.$playlist.eq(_this.nowPlaying);
+
+        if (_this.nowPlaying === 0) {
+          _this.loadVimeo(_this.$playlist.eq(_this.playlistLength));
+        } else {
+          _this.loadVimeo(_this.$playlist.eq(_this.nowPlaying - 1));
+        }
+
+      },
+
+      close: function() {
+        this.vimeoContainer.html('');
+        this.self.hide();
+      },
+    };
+
+    jQuery('.js-branded-overlay-trigger').on({
+      click: function(e) {
+        e.preventDefault();
+
+        BrandedModal.loadVimeo($(this).closest('.branded'));
+      },
+    });
+
+    jQuery('#branded-modal-nav-next').on({
+      click: function(e) {
+        e.preventDefault();
+
+        BrandedModal.next();
+      },
+    });
+
+    jQuery('#branded-modal-nav-prev').on({
+      click: function(e) {
+        e.preventDefault();
+
+        BrandedModal.prev();
+      },
+    });
+
+    jQuery('#branded-modal-close').on({
+      click: function(e) {
+        e.preventDefault();
+
+        BrandedModal.close();
+      },
+    });
+
   }
 
   /* footer drawers */
