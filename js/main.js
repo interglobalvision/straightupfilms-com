@@ -312,10 +312,4 @@ jQuery(document).ready(function() {
     },
   });
 
-  var isSafari = /Constructor/.test(window.HTMLElement);
-
-  if (isSafari) {
-    $('#discologo').css('padding-bottom', '7px');
-  }
-
 });
