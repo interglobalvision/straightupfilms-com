@@ -2,7 +2,7 @@ var projectTitles = jQuery('li.project');
 
 var $longAboutTrigger = jQuery('#long-about-trigger');
 
-var words = jQuery('li.animate');
+var $words = jQuery('li.animate');
 var $posts = jQuery('#posts');
 var $carousel = jQuery('#carousel');
 var $films = jQuery('#films');
@@ -91,8 +91,8 @@ jQuery(document).ready(function() {
     });
   }
 
-  if (words.length) {
-    var s = $.shuffle(words);
+  if ($words.length) {
+    var s = $.shuffle($words);
 
     setTimeout(function() {
 
@@ -100,12 +100,12 @@ jQuery(document).ready(function() {
 
       s.each(function(i, el) {
         setTimeout(function() {
-          $(el).css('opacity', 1);
+          $(el).addClass('show');
         }, 10 + (i * 150));
       });
 
       setTimeout(function() {
-        $('#animation-suf').css('opacity', 1);
+        $('#animation-suf').addClass('show');
       }, 10 + (l * 150));
 
     }, 400);

@@ -1145,23 +1145,28 @@ nav#films-filter li:hover {
   margin-bottom: 0.3em;
 }
 /* HOMEPAGE */
-ul#words {
+#words {
   font-size: 150px;
 }
-ul#words li {
+#words li {
+  opacity: 0;
   display: inline-block;
 }
-li.animate {
-  margin-right: 15px;
-}
-li.animate:last-child {
-  margin-right: 0;
-}
-li.animate,
-#animation-suf {
-  opacity: 0;
+#words li.show {
   -webkit-transition: opacity 0.8s;
           transition: opacity 0.8s;
+  opacity: 1;
+}
+#words li.animate {
+  margin-right: 15px;
+}
+#words li.animate:last-child {
+  margin-right: 0;
+}
+#animation-suf.show {
+  -webkit-transition: opacity 0.8s;
+          transition: opacity 0.8s;
+  opacity: 1;
 }
 /* VISION PAGE */
 #long-about-trigger {
@@ -1452,7 +1457,7 @@ footer li {
     height: 184px;
     font-size: 0.7em;
   }
-  ul#words {
+  #words {
     font-size: 110px;
   }
   section#posts {
@@ -1518,7 +1523,7 @@ footer li {
   #single-team img.attachment-team-single {
     max-width: 100%;
   }
-  ul#words {
+  #words {
     font-size: 90px;
   }
   section#posts {
@@ -1612,7 +1617,7 @@ footer li {
   .grid-container {
     width: 100%;
   }
-  ul#words {
+  #words {
     font-size: 60px;
   }
   li.animate {
@@ -1766,7 +1771,7 @@ footer li {
   #main-content {
     font-size: 50px;
   }
-  ul#words {
+  #words {
     font-size: 50px;
   }
   #films-carousel {

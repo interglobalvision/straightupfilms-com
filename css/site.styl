@@ -353,31 +353,33 @@ nav#films-filter
     font-size: .9em
   .content
     p:first-child
-      margin-top:0
+      margin-top: 0
   li
     list-style-position: outside
     margin-bottom: .3em
 
 /* HOMEPAGE */
-ul#words
-  font-size:150px
+#words
+  font-size: 150px
   li
+    opacity: 0
     display:inline-block
+    &.show
+      transition: opacity .8s
+      opacity: 1
+    &.animate
+      margin-right:15px
+      &:last-child
+        margin-right:0
 
-li.animate
-  margin-right:15px
-  &:last-child
-    margin-right:0
-
-li.animate, #animation-suf
-  opacity:0
+#animation-suf.show
   transition: opacity .8s
-
+  opacity: 1
 
 /* VISION PAGE */
 #long-about-trigger
-  font-size:.7em
-  vertical-align:top
+  font-size: .7em
+  vertical-align: top
 
 #people
   li
@@ -637,7 +639,7 @@ footer
     height:184px
     font-size:.7em
 
-  ul#words
+  #words
     font-size:110px
 
   section#posts
@@ -719,7 +721,7 @@ footer
   #single-team img.attachment-team-single
     max-width: 100%
 
-  ul#words
+  #words
     font-size: 90px
 
   section#posts
@@ -816,7 +818,7 @@ footer
   .grid-container
     width: 100%
 
-  ul#words
+  #words
     font-size: 60px
 
   li.animate
@@ -961,7 +963,7 @@ footer
   #main-content
     font-size: 50px
 
-  ul#words
+  #words
     font-size: 50px
 
   #films-carousel
