@@ -12,7 +12,6 @@
 
 	<ul id="footer-right" class="inline-list half align-right">
 		<li>our <a class="black" href="<?php echo site_url('/investors'); ?>">FILM FUND</a></li>
-		<li>our commercial division <a target="_blank" href="http://www.disorderlyconduct.tv"><img id="discologo" src="<?php bloginfo('stylesheet_directory'); ?>/img/disco-logo.svg" ></a></li>
 	</ul>
 </footer>
 
