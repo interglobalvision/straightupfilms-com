@@ -9,10 +9,18 @@ var $films = jQuery('#films');
 var $brandedModal = jQuery('#branded-modal');
 
 var wh = jQuery(window).height();
+
 var $main = jQuery('#main-content');
+var $header = jQuery('#header');
+var $footer = jQuery('#footer');
+var $carouselContainer = jQuery('#films-carousel');
 
 function stickyFooter(wh) {
-  $main.css('min-height', (wh - 170) + 'px');
+  if ($carouselContainer.length) {
+    $main.css('min-height', (wh - $header.innerHeight() - $carouselContainer.innerHeight() - $footer.innerHeight() - 70) + 'px');
+  } else {
+    $main.css('min-height', (wh - $header.innerHeight() - $footer.innerHeight() - 10) + 'px');
+  }
 }
 
 jQuery(window).resize(function() {

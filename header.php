@@ -63,7 +63,7 @@
         <![endif]-->
 
 <!-- start content -->
-<header class="cf">
+<header id="header" class="cf">
 	<div class="quarter">
 <a href="<?php echo site_url(); ?>">SU,F.</a>
 	</div>
