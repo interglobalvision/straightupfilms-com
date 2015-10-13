@@ -84,6 +84,7 @@
         <div class="held">
           <div class="container">
             <div id="branded-modal-video-wrapper"></div>
+            <h3 id="branded-modal-title" class="align-center t1"></h3>
           </div>
         </div>
       </div>

@@ -191,6 +191,7 @@ jQuery(document).ready(function() {
       $playlist: $('.branded'),
       playlistLength: ($('.branded').length - 1),
       vimeoContainer: $('#branded-modal-video-wrapper'),
+      titleContainer: $('#branded-modal-title'),
 
       loadVimeo: function($element) {
         var _this = this;
@@ -199,6 +200,7 @@ jQuery(document).ready(function() {
         _this.self.show();
         _this.nowPlaying = $element.index();
         _this.vimeoContainer.html('<iframe id="branded-modal-vimeo" width="100%" height="100%" src="//player.vimeo.com/video/' + data.vimeo + '?api=1&autoplay=1&badge=0&byline=0&portrait=0&player_id=branded-modal-vimeo" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+        _this.titleContainer.html(data.title);
 
         _this.player = $f($('#branded-modal-vimeo')[0]);
         _this.player.addEvent('ready', function() {
