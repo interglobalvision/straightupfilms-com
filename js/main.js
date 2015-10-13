@@ -58,12 +58,6 @@ jQuery(document).ready(function() {
 
   stickyFooter(wh);
 
-  if (!Modernizr.svg) {
-    $('img[src*="svg"]').attr('src', function() {
-      return $(this).attr('src').replace('.svg', '.png');
-    });
-  }
-
   if (projectTitles.length) {
     projectTitles.on({
       click: function(e) {
