@@ -50,13 +50,6 @@ textarea {
 body {
   margin: 0;
 }
-a:focus {
-  outline: thin dotted;
-}
-a:active,
-a:hover {
-  outline: 0;
-}
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
