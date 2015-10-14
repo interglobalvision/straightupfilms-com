@@ -17,9 +17,9 @@ var $carouselContainer = jQuery('#films-carousel');
 
 function stickyFooter(wh) {
   if ($carouselContainer.length) {
-    $main.css('min-height', (wh - $header.innerHeight() - $carouselContainer.innerHeight() - $footer.innerHeight() - 70) + 'px');
+    $main.css('min-height', (wh - $header.innerHeight() - $carouselContainer.innerHeight() - $footer.innerHeight() - 90) + 'px');
   } else {
-    $main.css('min-height', (wh - $header.innerHeight() - $footer.innerHeight() - 10) + 'px');
+    $main.css('min-height', (wh - $header.innerHeight() - $footer.innerHeight() - 30) + 'px');
   }
 }
 

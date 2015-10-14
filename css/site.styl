@@ -113,6 +113,9 @@ i, em
 .uppercase
   text-transform:uppercase
 
+#kern-ampersand
+  padding-left: 0.05em
+
 /* LINKS */
 a,a:active,a:visited
   text-decoration: none
@@ -168,13 +171,14 @@ li.page_item
   margin-left:1.5%!important
 
 #main-content
-  font-size:80px
-  line-height:1
+  font-size: 80px
+  line-height: 1
+  margin-bottom: 20px
 
 #main-menu
   margin: 0
   li
-    padding-left:15px
+    padding-left: 25px
     &:first-child
       padding-left:0px
 
@@ -297,7 +301,7 @@ img
 #carousel-next
   right:50px
 
-nav#films-filter
+#films-filter
   font-size:24px
   clear: both
   & li
@@ -517,14 +521,14 @@ article.post .post-copy p:last-child
 article.post .post-copy-full
   display:none
 
-nav#pagination
+#pagination
   text-align: center
   border:2px #000 solid
   padding:20px
   margin-bottom:16px
   box-sizing: border-box
 
-nav#news-nav, nav#news-nav-mobile
+#news-nav, #news-nav-mobile
   font-size:18px
   line-height:1.4
   .news-switch-button
@@ -537,7 +541,7 @@ nav#news-nav, nav#news-nav-mobile
       background-color: $yellow
       opacity: 1
 
-nav#news-nav-mobile
+#news-nav-mobile
   display: none
   font-size: 14px
   width: 90%
@@ -547,7 +551,7 @@ nav#news-nav-mobile
     width: 34%
 
 /* FOOTER */
-footer
+#footer
   color: silver
   .meta-drawer-trigger
     transition: all .2s
@@ -584,12 +588,12 @@ footer
   .grid-container
     width: 2092px
 
-  section#posts
+  #posts
     width:1800px
 
 @media screen and (max-width: 1480px)
 
-  section#posts
+  #posts
     width:1000px
 
   // Grid of 12 86px columns with 14px gutter
@@ -630,7 +634,7 @@ footer
   .col12
     width: (12*$col)+(11*$gutter)
 
-  nav#films-filter li
+  #films-filter li
     margin: 14px 7px
 
 @media screen and (max-width: 1240px)
@@ -638,8 +642,7 @@ footer
   #films-carousel
     height:473px
 
-
-  nav#films-filter li
+  #films-filter li
     margin: 12px 6px
 
   #films article
@@ -649,17 +652,14 @@ footer
   #words
     font-size:110px
 
-  section#posts
+  #posts
     width:850px
-
 
   article.post .post-title
     font-size: .8em
 
-
   article.post .post-meta, article.post .post-copy
     font-size: 16px
-
 
   /* Grid of 12 73px columns with 12px gutter */
   .grid-container
@@ -674,50 +674,38 @@ footer
     margin-left: 6px
     margin-right: 6px
 
-
   .col1
     width:73px
-
 
   .col2
     width:158px
 
-
   .col3
     width:243px
-
 
   .col4
     width:328px
 
-
   .col5
     width:413px
-
 
   .col6
     width:498px
 
-
   .col7
     width:583px
-
 
   .col8
     width:668px
 
-
   .col9
     width:753px
-
 
   .col10
     width:838px
 
-
   .col11
     width:923px
-
 
   .col12
     width:1008px
@@ -725,23 +713,25 @@ footer
 
 @media screen and (max-width: 1035px)
 
+  #main-menu li
+    padding-left: 17px
+
   #single-team img.attachment-team-single
     max-width: 100%
 
   #words
     font-size: 90px
 
-  section#posts
+  #posts
     width:630px
-
 
   article.post .post-title
     font-size:.8em
 
-  nav#news-nav
+  #news-nav
     font-size:16px
 
-  header
+  #header
     font-size: 50px
 
   #films-carousel
@@ -750,26 +740,25 @@ footer
   .carousel-title
     font-size: 100px
 
-
   .carousel-subtitle
     font-size: 60px
 
-  nav#films-filter li
+  #films-filter li
     margin: 8px 4px
 
   #films article
     font-size:.6em
 
-  footer.size-copy
+  #footer.size-copy
     font-size:14px
 
-  footer .half
+  #footer .half
     float: none
     width: auto
     display: inline-block
     padding: 3px 10px
 
-  footer .half.align-right
+  #footer .half.align-right
     text-align: left
 
   /* Grid of 12 55px columns with 8px gutter */
@@ -819,6 +808,9 @@ footer
 
 @media screen and (max-width: 770px)
 
+  #main-menu li
+    padding-left: 12px
+
   #main-content
     font-size: 70px
 
@@ -831,10 +823,10 @@ footer
   li.animate
     margin-right: 8px
 
-  section#long-about
+  #long-about
     padding-left: 0px
 
-  ul#people
+  #people
     margin: auto
     width: 270px
 
@@ -854,7 +846,7 @@ footer
   .carousel-subtitle
     font-size: 60px
 
-  nav#films-filter
+  #films-filter
     width: 90%
     margin: 0 auto 10px auto
     font-size: 16px
@@ -893,7 +885,7 @@ footer
     margin-left: auto
     margin-right: auto
 
-  section#posts
+  #posts
     width: 90%
     margin: auto
     float: none
@@ -901,7 +893,7 @@ footer
   .newsleftmargin
     margin-left: auto !important
 
-  section#posts article.post
+  #posts article.post
     float: none
     width: 100%
     margin-left: 0
@@ -910,7 +902,7 @@ footer
   article.post .post-title
     font-size: .7em
 
-  nav#news-nav-mobile
+  #news-nav-mobile
     display: block
 
   nav#news-nav
@@ -921,28 +913,42 @@ footer
     margin: 0 auto 10px auto
     text-align: center
 
-  nav#news-nav ul
+  #news-nav ul
     margin-top: 8px
 
-  nav#news-nav li
+  #news-nav li
     display: inline-block
     padding: 0px 3px
 
   #about
     font-size: 55px;
 
-  footer.full
+  #footer.full
     padding: 0px
 
 @media screen and (max-width: 520px)
-  header .quarter, header .three-quarter
+
+  #header
+    line-height: 1.2
+    font-size: 46px
+
+  #header .quarter, #header .three-quarter
     float: none
     width: auto
     display: inline-block
     padding: 5px
 
-  header .align-right
+  #header .align-right
     text-align: left
+
+  #main-menu li
+    padding-left: 0px
+    padding-right: 9px
+
+  .carousel-nav
+    top: 44%
+    img
+      max-width: 30px
 
   #carousel-next
     right: 15px
@@ -955,16 +961,13 @@ footer
   header
     font-size: 38px
 
-  #main-menu li
-    padding-left: 7px
-
-  header .quarter, header .three-quarter
+  #header .quarter, #header .three-quarter
     float: none
     width: auto
     display: inline-block
     padding: 5px
 
-  header .align-right
+  #header .align-right
     text-align: left
 
   #main-content
@@ -988,7 +991,7 @@ footer
   #carousel-prev
     left: 5px
 
-  nav#films-filter
+  #films-filter
     font-size: 16px
 
   #films article
@@ -997,10 +1000,10 @@ footer
   #about
     font-size: 45px;
 
-  footer .half
+  #footer .half
     padding: 3px 5px
 
-  footer.size-copy
+  #footer.size-copy
     font-size: 11px
 
   .genericon
