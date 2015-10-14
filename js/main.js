@@ -58,6 +58,10 @@ if ($posts.length) {
   });
 }
 
+jQuery(document).imagesLoaded(function() {
+  stickyFooter(wh);
+});
+
 jQuery(document).ready(function() {
 
   /mobile/i.test(navigator.userAgent) && !window.location.hash && setTimeout(function() {
